@@ -35,7 +35,7 @@ for (const article of articles.get()){
     
     
     // Extract the item name and description separately for each item
-    const lunchSpecials = lunchItems.map((item : any) => ({
+    const lunchspecials = lunchItems.map((item : any) => ({
         title: $.find(item).find('strong').text(),
         description: $.find(item).not('strong').text(),
         isGlutenFree: false,
@@ -48,7 +48,7 @@ for (const article of articles.get()){
         uid: hashFunc($.find(item).find('strong').text())
     }));
     
-     const dinnerSpecials = dinnerItems.map((item : any) => ({
+     const dinnerspecials = dinnerItems.map((item : any) => ({
         title:   $.find(item).find('strong').text(),
         description:  $.find(item).not('strong').text(),
         isGlutenFree: false,
@@ -61,7 +61,7 @@ for (const article of articles.get()){
         uid: hashFunc($.find(item).find('strong').text())
      }));
 
-     const brunchSpecials = brunchItems.map((item : any) => ({
+     const brunchspecials = brunchItems.map((item : any) => ({
         title:   $.find(item).find('strong').text(),
         description:  $.find(item).not('strong').text(),
         isGlutenFree: false,
@@ -75,7 +75,7 @@ for (const article of articles.get()){
      }));
 
     //pushes items into dishes array
-    dishes.push(... brunchSpecials, ... lunchSpecials, ... dinnerSpecials);
+    dishes.push(... brunchspecials, ... lunchspecials, ... dinnerspecials);
     
 }
 //uploads to database
